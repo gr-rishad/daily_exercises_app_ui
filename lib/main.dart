@@ -1,7 +1,8 @@
 import 'package:daily_excerises_app/constants.dart';
+import 'package:daily_excerises_app/screens/details_screen.dart';
 import 'package:flutter/material.dart';
 import './constants.dart';
-import 'home_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(
@@ -12,7 +13,7 @@ void main() {
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: TextTheme().apply(displayColor: kTextColor),
       ),
-      home: HomeScreen(),
+      home: DetailsScreen(),
     ),
   );
 }
