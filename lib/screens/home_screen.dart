@@ -1,13 +1,14 @@
 import 'package:daily_excerises_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../screens/bottom_navigationbar.dart';
+import './bottom_nav_bar.dart';
+
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(),
+      bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: [
           Container(
@@ -96,41 +97,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class BottomNavigationBar extends StatelessWidget {
-  const BottomNavigationBar({
-    Key key,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 10,
-      ),
-      height: 80,
-      color: Colors.white,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          BottomNavItem(
-            title: 'Today',
-            svgSrc: 'assets/icons/calendar.svg',
-          ),
-          BottomNavItem(
-            title: 'All Exercises',
-            svgSrc: 'assets/icons/gym.svg',
-            isActive: true,
-          ),
-          BottomNavItem(
-            title: 'Settings',
-            svgSrc: 'assets/icons/settings.svg',
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 class CategoryCard extends StatelessWidget {
   final String svgSrc;
